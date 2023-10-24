@@ -5,9 +5,10 @@ metadata:
   namespace: poc
   labels:
     app: my-app
-    prometheus.io/scrape: "true"
-    prometheus.io/port: "8080"
-    prometheus.io/path: "/prometheus"
+  annotations:
+   prometheus.io/path: "/prometheus"
+   prometheus.io/port: "8080"
+   prometheus.io/scrape: "true"
 spec:
   selector:
     app: my-app
