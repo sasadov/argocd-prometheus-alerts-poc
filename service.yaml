@@ -3,6 +3,11 @@ kind: Service
 metadata:
   name: my-app
   namespace: poc
+  labels:
+    app: my-app
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "8080"
+    prometheus.io/path: "/prometheus"
 spec:
   selector:
     app: my-app
